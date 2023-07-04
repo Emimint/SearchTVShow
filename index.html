@@ -4,32 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
     <title>SearchTVShow</title>
   </head>
   <body>
     <!-- Top section Area -->
     <section class="top">
-      <div>
-        <img src="" alt="" />
+      <div class="head">
+        <img src="img/glenn-carstens-peters-EOQhsfFBhRk-unsplash.jpg" alt="" />
         <h1>Welcome to SearchTVShow!</h1>
-        <img src="" alt="" />
+        <img src="img/jeremy-yap-J39X2xX_8CQ-unsplash.jpg" alt="" />
       </div>
       <h2>
         No more struggle finding a show name. Just tap whatever you remember,
-        and we'll deliver :) !
+        and we'll deliver 📺!
       </h2>
       <h3>Search a show by:</h3>
-      <button id="title">title</button>
-      <button id="cast">cast</button>
-      <button id="crew">crew</button>
-      <button id="guest">guest</button>
+      <div id ="choices">
+        <button id="title">title</button>
+        <button id="cast">cast</button>
+        <button id="crew">crew</button>
+        <button id="guest">guest</button>
+      </div>
     </section>
 
     <!-- Search Bar Area -->
     <section class="middle">
       <form>
         <div>
-          <input id="username" type="text" name="text" />
+          <input id="searchField" type="text" name="text" />
           <input id="inputBtn" type="submit" value="Send" />
         </div>
         <ul id="list"></ul>

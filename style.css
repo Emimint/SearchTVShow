@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Caprasimo', cursive;
+text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: linear-gradient(217deg, #cd4a39, #311820 70.71%), linear-gradient(127deg, #c28b44, #302525 70.71%);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: rgb(235, 243, 4) 1px 0 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+  background: -webkit-linear-gradient(205deg,#2d1333, #952010);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.2px black;
+}
+
+h3{
+    color: #311820;
+}
+
+body {
+  color: #1b1a1a;
+}
+
+/* Image default format: */
+img {
+  max-width: 20%;
+  height: auto;
+  /* border: solid #270e0ec6 5px; */
+  box-shadow: 0 0.6em 1.5em 0.8em #270e0ec6;
+}
+
+.head{
+    display: flex;
+      justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+#choices{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+button {
+  background-color: black;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 0.5em 2em;
+  display: block;
+  margin: auto;
+  color: rgb(223, 141, 41);
+  border: 3px solid rgb(223, 141, 41);
+  transition: 0.2s;
+}
+
+button:hover {
+  border-color: #FC0;
+  box-shadow: 0 0.5em 0.5em -0.3em #FC0;
+  color: white;
+  transform: translateY(-0.2em);
+  cursor: pointer;
+}
+
+#inputBtn{
+    background-color : rgb(228, 128, 39);
+    border-radius: 8%;
+}
+
+#searchField{
+    background-color: #371313;
+    color: rgba(234, 190, 119, 0.969);
+
+}
+footer {
+    color: rgb(208, 165, 100);
+}
+
+a{
+    color: rgb(228, 128, 39);
+}
+
