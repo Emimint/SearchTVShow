@@ -7,6 +7,8 @@ const inputBtn = document.querySelector("#inputBtn");
 const searchField = document.querySelector("#searchField");
 const refreshBtn = document.querySelector("#refresh");
 
+const resultSection = document.querySelector(".result");
+
 const titleUrl = "https://api.tvmaze.com/search/shows?q=";
 const castUrl = "https://api.tvmaze.com/search/people?q=";
 let queryUrl = titleUrl;
@@ -39,18 +41,48 @@ const hideDisplay = () => {
   formSection.classList.add("hidden");
 };
 
-const displayResults = (data) => {
-  const searchRes = titleBtn.classList.contains("selected") ? "show" : "person";
-  console.log(searchRes);
+const fixAnchors = () => {
+  var anchors = document.getElementsByTagName("a");
+  for (var i = 0; i < anchors.length; i++) {
+    anchors[i].setAttribute("target", "_blank");
+  }
+};
 
-  for (var result of data) {
-    const { url, name } = result[searchRes];
-    const image = result[searchRes].image
-      ? result[searchRes].image.medium
-      : "img/no-img-portrait-text.png";
-    console.log(url);
-    console.log(name);
-    console.log(image);
+const displayResults = (data) => {
+  if (data.length != 0) {
+    const searchRes = titleBtn.classList.contains("selected")
+      ? "show"
+      : "person";
+    for (var result of data) {
+      const { url, name } = result[searchRes];
+      const image = result[searchRes].image
+        ? result[searchRes].image.medium
+        : "img/no-img-portrait-text.png";
+
+      const divResult = document.createElement("div");
+      const imgDisplay = document.createElement("img");
+      const urlDisplay = document.createElement("a");
+
+      // resultSection.style.height = "500px";
+      // imgDisplay.style.width = "50%";
+      // nameDisplay.append(urlDisplay);
+
+      imgDisplay.src = image;
+
+      urlDisplay.href = url;
+      urlDisplay.innerHTML = name;
+      urlDisplay.style.padding = "0.5rem";
+
+      divResult.append(imgDisplay);
+      divResult.append(urlDisplay);
+
+      divResult.style.padding = "0.5rem";
+
+      resultSection.append(divResult);
+      fixAnchors();
+    }
+  } else {
+    throw new Error();
   }
 };
 
@@ -67,6 +99,7 @@ inputBtn.addEventListener("click", (e) => {
         .catch(() => {
           const errMessage = document.createElement("div");
           errMessage.innerHTML = "Nothing to show...";
+          errMessage.style.fontSize = "2rem";
 
           const middleSection = document.querySelector(".middle");
           middleSection.append(errMessage);
