@@ -7,11 +7,11 @@ const inputBtn = document.querySelector("#inputBtn");
 const searchField = document.querySelector("#searchField");
 const refreshBtn = document.querySelector("#refresh");
 
-const resultSection = document.querySelector( ".result" );
+const resultSection = document.querySelector(".result");
 
 const scrollBackButton = document.querySelector(".fixed");
 const scrollBackButtonTop = scrollBackButton.getBoundingClientRect().top;
-const screenRatio = 0.7 // value between 0 and 1 used to defined when the "Scrolling back up" button appear or disappear
+const screenRatio = 0.7; // value between 0 and 1 used to defined when the "Scrolling back up" button appear or disappear
 
 const titleUrl = "https://api.tvmaze.com/search/shows?q=";
 const castUrl = "https://api.tvmaze.com/search/people?q=";
@@ -67,10 +67,6 @@ const displayResults = (data) => {
       const imgDisplay = document.createElement("img");
       const urlDisplay = document.createElement("a");
 
-      // resultSection.style.height = "500px";
-      // imgDisplay.style.width = "50%";
-      // nameDisplay.append(urlDisplay);
-
       imgDisplay.src = image;
 
       urlDisplay.href = url;
@@ -86,7 +82,7 @@ const displayResults = (data) => {
       fixAnchors();
     }
   } else {
-    throw new Error();
+    throw new Error(); // any error, since it will be caught later.
   }
 };
 
@@ -124,7 +120,7 @@ castBtn.addEventListener("click", () => {
 refreshBtn.addEventListener("click", () => {
   window.location.reload();
   window.scrollTo(0, 0);
-} );
+});
 
 /* "Scrolling back up": */
 scrollBackButton.addEventListener("click", function () {

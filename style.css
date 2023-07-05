@@ -52,18 +52,14 @@ img {
 
 section,
 .search,
-.result, .result > div {
+.result,
+.result > div {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-
-/* .result > div {
-  flex-direction: row;
-  flex-wrap: wrap;
-} */
 
 .hidden {
   display: none;
