@@ -1,29 +1,32 @@
 * {
   box-sizing: border-box;
-  font-family: 'Caprasimo', cursive;
-text-align: center;
+  font-family: "Caprasimo", cursive;
+  text-align: center;
 }
 
 html {
-  scroll-behavior: smooth;
-  background: linear-gradient(217deg, #cd4a39, #311820 70.71%), linear-gradient(127deg, #c28b44, #302525 70.71%);
+  background: linear-gradient(217deg, #cd4a39, #311820 70.71%),
+    linear-gradient(127deg, #c28b44, #302525 70.71%);
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-shadow: rgb(235, 243, 4) 1px 0 10px;
+  font-size: 2.5rem;
+  text-shadow: rgb(235, 243, 4) 1px 0 10px;
 }
 
 h2 {
-    font-size: 1.5rem;
-  background: -webkit-linear-gradient(205deg,#2d1333, #952010);
+  margin-bottom: 0%;
+  font-size: 1.5rem;
+  background: -webkit-linear-gradient(205deg, #2d1333, #952010);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.2px black;
 }
 
-h3{
-    color: #311820;
+h3 {
+  margin-top: 0%;
+  color: #42232c;
+  -webkit-text-stroke: 0.2px black;
 }
 
 body {
@@ -38,27 +41,46 @@ img {
   box-shadow: 0 0.6em 1.5em 0.8em #270e0ec6;
 }
 
-.head{
-    display: flex;
-      justify-content: center;
+.head {
+  display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0.5rem;
   justify-content: space-between;
 }
 
-section {
+section,
+.search,
+.result {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.search,
+.result,
+.top,
+.middle,
+.bottom,
+footer {
   padding: 1rem;
 }
 
-#choices{
-    display: flex;
-    width: 50%;
-    justify-content: space-around;
+#choices {
+  display: flex;
+  margin: 0.5em;
+  width: 50%;
+  justify-content: space-around;
+}
+
+form {
+  margin: 1.5rem;
 }
 
 button {
@@ -73,29 +95,28 @@ button {
   transition: 0.2s;
 }
 
-button:hover, .selected {
-  border-color: #FC0;
-  box-shadow: 0 0.5em 0.5em -0.3em #FC0;
+button:hover,
+.selected {
+  border-color: #fc0;
+  box-shadow: 0 0.5em 0.5em -0.3em #fc0;
   color: white;
   transform: translateY(-0.2em);
   cursor: pointer;
 }
 
-#inputBtn{
-    background-color : rgb(228, 128, 39);
-    border-radius: 8%;
+#inputBtn {
+  background-color: rgb(228, 128, 39);
+  border-radius: 8%;
 }
 
-#searchField{
-    background-color: #371313;
-    color: rgba(234, 190, 119, 0.969);
-
+#searchField {
+  background-color: #371313;
+  color: rgba(234, 190, 119, 0.969);
 }
 footer {
-    color: rgb(208, 165, 100);
+  color: rgb(208, 165, 100);
 }
 
-a{
-    color: rgb(228, 128, 39);
+a {
+  color: rgb(228, 128, 39);
 }
-

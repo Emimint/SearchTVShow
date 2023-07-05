@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap"
+      rel="stylesheet"
+    />
     <title>SearchTVShow</title>
   </head>
   <body>
@@ -21,15 +24,17 @@
         No more struggle finding a show name. Just tap whatever you remember,
         and we'll deliver 📺
       </h2>
-      <h3>Search a show by:</h3>
-      <div id ="choices">
-        <button class="choice selected">title</button>
-        <button class="choice">cast</button>
-      </div>
     </section>
 
     <!-- Search Bar Area -->
     <section class="middle">
+      <div class="search">
+        <h3>Search a show by:</h3>
+        <div id="choices">
+          <button class="choice selected">title</button>
+          <button class="choice">cast</button>
+        </div>
+      </div>
       <form>
         <div>
           <input id="searchField" type="text" name="text" />
@@ -37,12 +42,12 @@
         </div>
         <ul id="list"></ul>
       </form>
+      <div class="result"></div>
     </section>
 
     <!-- Bottom page Area -->
-    <section class="bottom"><div></div></section>
-    <section>
-      <button id="refresh">refresh</button>
+    <section class="bottom">
+      <div><button id="refresh">refresh</button></div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="app.js"></script>
