@@ -5,6 +5,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background: linear-gradient(217deg, #cd4a39, #311820 70.71%),
     linear-gradient(127deg, #c28b44, #302525 70.71%);
 }
@@ -124,4 +125,20 @@ footer {
 
 a {
   color: rgb(228, 128, 39);
+}
+
+/* "Scrolling back up" components: */
+.fixed {
+  opacity: 0;
+  width: 20%;
+  transition: all 1s ease;
+  cursor: pointer;
+  position: fixed;
+  z-index: 99;
+  bottom: 3%;
+  right: 2%;
+}
+
+.dimming {
+  opacity: 1;
 }

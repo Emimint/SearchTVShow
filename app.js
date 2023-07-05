@@ -7,7 +7,11 @@ const inputBtn = document.querySelector("#inputBtn");
 const searchField = document.querySelector("#searchField");
 const refreshBtn = document.querySelector("#refresh");
 
-const resultSection = document.querySelector(".result");
+const resultSection = document.querySelector( ".result" );
+
+const scrollBackButton = document.querySelector(".fixed");
+const scrollBackButtonTop = scrollBackButton.getBoundingClientRect().top;
+const screenRatio = 0.7 // value between 0 and 1 used to defined when the "Scrolling back up" button appear or disappear
 
 const titleUrl = "https://api.tvmaze.com/search/shows?q=";
 const castUrl = "https://api.tvmaze.com/search/people?q=";
@@ -120,4 +124,22 @@ castBtn.addEventListener("click", () => {
 refreshBtn.addEventListener("click", () => {
   window.location.reload();
   window.scrollTo(0, 0);
+} );
+
+/* "Scrolling back up": */
+scrollBackButton.addEventListener("click", function () {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
+
+/* "Scrolling back up" button animation: */
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > scrollBackButtonTop * screenRatio ||
+    document.documentElement.scrollTop > scrollBackButtonTop * screenRatio
+  ) {
+    scrollBackButton.classList.add("dimming"); // toggle opacity
+  } else {
+    scrollBackButton.classList.remove("dimming");
+  }
+};
