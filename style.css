@@ -115,8 +115,17 @@ button:hover,
   background-color: #371313;
   color: rgba(234, 190, 119, 0.969);
 }
+
 footer {
   color: rgb(208, 165, 100);
+}
+
+a:hover {
+  border-color: #fc0;
+  box-shadow: 0 0.5em 0.5em -0.3em #fc0;
+  color: rgb(236, 196, 77);
+  transform: translateY(-0.2em);
+  cursor: pointer;
 }
 
 a {
@@ -137,4 +146,8 @@ a {
 
 .dimming {
   opacity: 1;
+}
+
+#lagotD{
+  font-size: xx-small;
 }
