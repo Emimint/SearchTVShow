@@ -20,9 +20,3 @@ A simple app that use the TV Maze API (https://www.tvmaze.com/api) to search for
 
 - https://unsplash.com
 - https://www.flaticon.com
-
-## Demo
-
-<div align="center">
- <img src="img/demo.mp4" height="600px">
-</div>
