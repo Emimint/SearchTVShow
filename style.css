@@ -73,7 +73,7 @@ button {
   transition: 0.2s;
 }
 
-button:hover {
+button:hover, .selected {
   border-color: #FC0;
   box-shadow: 0 0.5em 0.5em -0.3em #FC0;
   color: white;
